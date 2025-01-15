@@ -6,10 +6,10 @@ function GenreList() {
     const [activeLink, setActiveLink ] = useState(0)
 
     useEffect(() => {
-        getGenreList();
+        getGenreLists();
     }, []) 
 
-    const getGenreList = () => {
+    const getGenreLists = () => {
         GlobalApi.getGenreList.then((res) => {
             console.log(res.data.results);
             setGenreList(res.data.results);
