@@ -16,7 +16,7 @@ export function ThemeProvider({ children }) {
     // Save the theme to localStorage whenever it changes
     useEffect(() => {
         document.body.className = theme; 
-        console.log('theme', theme);
+        // console.log('theme', theme);
         localStorage.setItem('theme', theme); 
     }, [theme]);
 
