@@ -11,7 +11,7 @@ function Header() {
     };
 
     return (
-        <div className='flex items-center justify-center space-x-5 py-3 px-10'>
+        <div className='flex items-center justify-center space-x-5 py-3 px-6'>
             <img src={logo} alt="Game Logo" width={60} height={60} />
 
             <div className='flex bg-gray-200 p-2 w-full items-center mx-5 rounded-lg dark:bg-white'>
