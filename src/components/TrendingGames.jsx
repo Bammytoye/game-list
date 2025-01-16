@@ -6,7 +6,7 @@ function TrendingGames({ TrendingGame }) {
     }, [TrendingGame]);
 
     return (
-        <div className="mt-7 hidden md:block">
+        <div className="mt-10 hidden md:block">
             <h2 className="font-bold text-[30px] mb-2">
                 Trending Games 
             </h2>
