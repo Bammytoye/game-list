@@ -6,7 +6,7 @@ function Home() {
     
     return (
         <div className='grid grid-cols-4 gap-2 px-4'>
-            <div className="hidden md:block h-full px-3 bg-gray-100">
+            <div className="hidden md:block h-full px-3 rounded-lg shadow-lg dark:shadow-white">
                 <GenreList />
             </div>
 
