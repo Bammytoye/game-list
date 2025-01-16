@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import FrontBanner from "../components/FrontBanner"
 import GlobalApi from "../services/GlobalApi"
+import TrendingGames from "./TrendingGames"
 
 
 function GameList() {
@@ -18,7 +19,13 @@ function GameList() {
     return (
         <div>
             {
-                getAllGames?.length>0 ?<FrontBanner gameBanner={getAllGames[0]}/> :null 
+                getAllGames?.length>0 ? 
+                <div>
+                    <FrontBanner gameBanner={getAllGames[0]}/> 
+                    <TrendingGames TrendingGame= {getAllGames}/>  
+                </div>
+                :
+                null
             }
         </div>
     )

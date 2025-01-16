@@ -11,7 +11,6 @@ function GenreList() {
 
     const getGenreLists = () => {
         GlobalApi.getGenreList.then((res) => {
-            console.log(res.data.results);
             setGenreList(res.data.results);
         })
     } 
@@ -30,7 +29,7 @@ function GenreList() {
                     >
                         <img src={item.image_background} 
                             className="w-[40px] h-[40px] object-cover rounded-lg group-hover:scale-105 transition-all ease-out duration-200"
-                            alt="Genre Image"
+                            alt={item.name}
                             />
                         <h3 className={`text-[13px] group-hover:font-bold transition-all ease-out duration-200 ${
                             activeLink === index ? 'font-bold text-[20px]' : 'font-normal text-[13px]'
