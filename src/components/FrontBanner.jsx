@@ -1,9 +1,10 @@
-import { useEffect } from "react"
+import { useEffect } from "react";
+import PropTypes from "prop-types"; 
 
-function FrontBanner({gameBanner}) {
+function FrontBanner({ gameBanner }) {
     useEffect(() => {
-
-    }, [gameBanner])
+        
+    }, [gameBanner]);
         
     return (
         <div className="relative">
@@ -22,7 +23,14 @@ function FrontBanner({gameBanner}) {
                 alt={gameBanner.name}  
                 className="w-full md:h-[320px] lg:h-full object-cover rounded-2xl"/>
         </div>
-    )
+    );
 }
 
-export default FrontBanner
+FrontBanner.propTypes = {
+    gameBanner: PropTypes.shape({
+        name: PropTypes.string.isRequired, 
+        background_image: PropTypes.string.isRequired, 
+    }).isRequired, 
+};
+
+export default FrontBanner;

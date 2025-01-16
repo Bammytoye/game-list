@@ -4,9 +4,11 @@ import GenreList from "../components/GenreList";
 
 function Home() {
     const [selectedGenreID, setSelectedGenreID] = useState(4);  
+    const [selectedGamesGenreName, setSelectedGamesGenreName] = useState('Action');
 
-    const handleGenreSelection = (genreID) => {
+    const handleGenreSelection = (genreID, genreName) => {
         setSelectedGenreID(genreID);
+        setSelectedGamesGenreName(genreName);
     };
 
     return (
@@ -16,7 +18,7 @@ function Home() {
             </div>
 
             <div className="col-span-4 md:col-span-3 px-3">
-                <GameList genreID={selectedGenreID} />
+                <GameList genreID={selectedGenreID} selectedGamesGenreName={selectedGamesGenreName} />
             </div>
         </div>
     );

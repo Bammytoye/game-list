@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
+import PropTypes from "prop-types"; 
 import FrontBanner from "../components/FrontBanner";
 import GlobalApi from "../services/GlobalApi";
 import TrendingGames from "./TrendingGames";
 import GameByGenreId from "./GameByGenreId";
 
-function GameList({ genreID }) {
+function GameList({ genreID, selectedGamesGenreName }) {
     const [getAllGames, setGetAllGames] = useState([]);
     const [gameByGenreId, setGameByGenre] = useState([]);
 
@@ -33,11 +34,16 @@ function GameList({ genreID }) {
                 <div>
                     <FrontBanner gameBanner={getAllGames[0]} />
                     <TrendingGames TrendingGame={getAllGames} />
-                    <GameByGenreId GameByGenreList={gameByGenreId} />
+                    <GameByGenreId GameByGenreList={gameByGenreId} selectedGamesGenreName={selectedGamesGenreName} />
                 </div>
             ) : null}
         </div>
     );
 }
+
+GameList.propTypes = {
+    genreID: PropTypes.number.isRequired, 
+    selectedGamesGenreName: PropTypes.string.isRequired, 
+};
 
 export default GameList;
