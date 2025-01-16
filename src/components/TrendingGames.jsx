@@ -2,7 +2,7 @@ import { useEffect } from "react";
 
 function TrendingGames({ TrendingGame }) {
     useEffect(() => {
-        console.log(TrendingGame);
+        
     }, [TrendingGame]);
 
     return (
