@@ -38,7 +38,7 @@ function GenreList({ genreID }) {
                     />
                     <h3
                         className={`text-[13px] group-hover:font-bold transition-all ease-out duration-200 ${
-                            activeLink === index ? 'font-bold text-[20px]' : 'font-normal text-[13px]'
+                            activeLink === index ? 'font-bold lg:text-[20px]' : 'font-normal text-[13px]'
                         }`}
                     >
                         {item.name}

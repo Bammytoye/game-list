@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Header from "./components/Header";
 import Home from "./pages/Home";
 import { ThemeContext } from "./Context/ThemeContext";
+import Footer from "./components/Footer";
 
 function App() {
   const [theme, setTheme] = useState("dark"); 
@@ -19,6 +20,7 @@ function App() {
       >
         <Header />
         <Home />
+        <Footer />
       </div>
     </ThemeContext.Provider>
   );
