@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import Home from "./pages/Home";
 import { ThemeContext } from "./Context/ThemeContext";
 import Footer from "./components/Footer";
+import SearchBox from "./components/SearchBox";
 
 function App() {
   const [theme, setTheme] = useState("dark"); 
@@ -19,6 +20,7 @@ function App() {
         } min-h-[100vh]`}
       >
         <Header />
+        <SearchBox />
         <Home />
         <Footer />
       </div>

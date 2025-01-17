@@ -1,4 +1,6 @@
 import { useEffect } from "react";
+import PropTypes from "prop-types"; 
+
 
 function TrendingGames({ TrendingGame }) {
     useEffect(() => {
@@ -32,5 +34,9 @@ function TrendingGames({ TrendingGame }) {
         </div>
     );
 }
+
+TrendingGames.propTypes = {
+    TrendingGame: PropTypes.number.isRequired, 
+};
 
 export default TrendingGames;

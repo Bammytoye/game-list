@@ -12,7 +12,7 @@ function Home() {
     };
 
     return (
-        <div className='grid grid-cols-4 gap-2 px-4'>
+        <div className='grid grid-cols-4 gap-2 px-4 min-h-[30vh]'>
             <div className="hidden md:block h-full px-3 border-r-2 dark:border-gray-800 border-gray-300 rounded-md">
                 <GenreList genreID={handleGenreSelection} />
             </div>
